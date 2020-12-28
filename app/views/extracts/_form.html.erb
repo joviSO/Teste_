@@ -1,0 +1,36 @@
+<%= form_with(model: extract) do |form| %>
+  <% if extract.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(extract.errors.count, "error") %> prohibited this extract from being saved:</h2>
+
+      <ul>
+        <% extract.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :movimentacao %>
+    <%= form.text_field :movimentacao %>
+    <%= form.hidden_field :contum_id %>
+  </div>
+
+  <div class="field">
+    <%= form.label :tipo %>
+    <%= form.label :tipo, "Entrada", :value => "Entrada"  %>
+    <%= form.radio_button :tipo, true %>
+    <%= form.label :tipo, "Saída", :value => "Saída" %>
+    <%= form.radio_button :tipo, false, :checked => true %>
+  </div>
+
+  <div class="field">
+    <%= form.label :valor %>
+    <%= form.text_field :valor %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

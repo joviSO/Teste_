@@ -1,0 +1,34 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Conta(s)</h1>
+
+<table width="25%" border="1px">
+  <thead>
+    <tr>
+      <th>ID</th>
+      <th>Nome da conta</th>
+      <th>Extratos </th>
+      <th>userID</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @conta.each do |contum|%>
+      <tr>
+        <td> <%= contum.id %></td>
+        <td width="50%"> <%= contum.nomeDaConta %> </td>
+        <td width="50%"> <%= link_to 'Ir para extrato', extracts_path(:conta_id => contum.id) %> </td>
+        <td width="50%"> <%= contum.userId %> </td>
+      </tr>
+    <tr>
+
+    </tr>
+    <% end %>
+  </tbody>
+</table>
+
+
+<br>
+<h3><%= link_to 'Pagina inicial', root_path %></h3>
+<h3><%= link_to 'Criar nova conta', new_contum_path %></h3>
+

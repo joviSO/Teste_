@@ -1,0 +1,52 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Extratos</h1>
+
+<table width="50%" border="1px">
+  <thead>
+    <tr>
+      <td width="4%" height="20%"><b><%= sort_link(@q, :id)%></td>
+      <td width="30%" height="20%"><b><%= sort_link(@q, :movimentacao)%></td>
+      <td width="30%"><b><%= sort_link(@q, :tipo)%></td>
+      <td width="30%"><b><%= sort_link(@q, :valor)%></td>
+      <td width="38%"><b><%= sort_link(@q, :created_at)%></td>
+    </tr>
+  </thead>
+
+  <tbody>
+
+    <%= search_form_for @q do |f|%>
+      <%= f.date_field :created_at_gteq, html5: true, class: 'form-control' %>&nbsp;
+      <span><%= t('to') %></span>&nbsp;
+      <%= f.date_field :created_at_lteq, html5: true, class: 'form-control' %>&nbsp;
+      <%= f.submit%>&nbsp;
+      <%= link_to "&#10799;".html_safe, request.path, class: "font-weight-bold btn btn-outline-secondary" %>
+    <% end %>
+
+    <% @extracts.each do |extract| %>
+      <tr>
+        <td><%= extract.id %></td>
+
+       <td><%= extract.movimentacao %></td>
+      
+        <td><%= extract.tipo %></td>
+      
+        <td><%= extract.valor %></td>
+
+        <td><%= extract.created_at %></td>
+      </tr>
+    <% end %>
+  </tbody>
+  
+</table>
+<h1> Saldo: <%= @soma_dos_valores %> </h1> 
+<%= link_to 'Baixar CSV', extracts_path(format: :csv) %>
+
+<br>
+
+<%= link_to 'Novo pagamento/debito  ', new_extract_path(@contum)%><br>
+<%= link_to 'Voltar parar contas', conta_path %>
+<h3> <%=link_to 'Deslogar', destroy_user_session_path, method: :get %>  </h3>
+<td><%= link_to 'Sair sem deslogar', root_path %></td>
+
+
