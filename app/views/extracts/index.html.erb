@@ -40,12 +40,12 @@
   
 </table>
 <h1> Saldo: <%= @soma_dos_valores %> </h1> 
-<%= link_to 'Baixar CSV', extracts_path(format: :csv) %>
+<h2><%= link_to 'Baixar CSV', extracts_path(format: :csv) %></h2>
 
 <br>
 
-<%= link_to 'Novo pagamento/debito  ', new_extract_path(@contum)%><br>
-<%= link_to 'Voltar parar contas', conta_path %>
+<h3><%= link_to 'Novo pagamento/debito  ', new_extract_path%><br></h3>
+<h3><%= link_to 'Voltar para contas', conta_path %></h3>
 <h3> <%=link_to 'Deslogar', destroy_user_session_path, method: :get %>  </h3>
 <td><%= link_to 'Sair sem deslogar', root_path %></td>
 

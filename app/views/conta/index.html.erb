@@ -8,7 +8,6 @@
       <th>ID</th>
       <th>Nome da conta</th>
       <th>Extratos </th>
-      <th>userID</th>
     </tr>
   </thead>
 
@@ -18,7 +17,6 @@
         <td> <%= contum.id %></td>
         <td width="50%"> <%= contum.nomeDaConta %> </td>
         <td width="50%"> <%= link_to 'Ir para extrato', extracts_path(:conta_id => contum.id) %> </td>
-        <td width="50%"> <%= contum.userId %> </td>
       </tr>
     <tr>
 
