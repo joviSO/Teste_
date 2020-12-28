@@ -1,5 +1,5 @@
 class Extract < ApplicationRecord
-    belongs_to :contum
+
     
     def self.total
         all.map{|objeto| objeto.tipo ? objeto.valor : objeto.valor * -1}.sum 
