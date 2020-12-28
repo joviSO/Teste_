@@ -50,7 +50,7 @@ Extract.create!(
     tipo: true
     valor: 390.90
     create_at: 2020-12-23
-    contum_in: 4
+    
 )
 Extract.create!(
     id:2
@@ -58,7 +58,7 @@ Extract.create!(
     tipo: true
     valor: 545.45
     create_at: 2020-12-24
-    contum_in: 4
+    
 )
 Extract.create!(
     id:3
@@ -66,7 +66,7 @@ Extract.create!(
     tipo: true
     valor: 300.00
     create_at: 2020-12-25
-    contum_in: 4
+    
 )
 Extract.create!(
     id:4
@@ -74,7 +74,7 @@ Extract.create!(
     tipo: true
     valor: 850.50
     create_at: 2020-12-23
-    contum_in: 1
+    
 )
 Extract.create!(
     id:5
@@ -82,5 +82,5 @@ Extract.create!(
     tipo: true
     valor: 400.00
     create_at: 2020-12-25
-    contum_in: 1
+    
 )
