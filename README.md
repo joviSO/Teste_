@@ -1,5 +1,5 @@
 # README
-</1>Pagamentos Online</h1>
+</h1>Pagamentos Online</h1>
 <h3 align="center">Project developed by the interns in order to improve and learn more about ruby on rails.</h3>
 
 <p align="center">
@@ -33,8 +33,6 @@ Technologies that were used to develop this project
 - [Ruby 2.6.5](https://www.ruby-lang.org/pt/)
 - [Rails 6.0.3](https://rubyonrails.org/)
 - [PostgreSQL](https://www.postgresql.org/)
-- [Bootstrap 4.5](https://getbootstrap.com/)
-- [JQuery 3.5.1](https://jquery.com/)
 
 ## :computer: Getting started
 
@@ -109,17 +107,3 @@ $ rails server
 
 ## :boy: Developers
 - [João Victor](https://joviSO.github.io/)
-- 
-
----
-
-### :star2: Extras
-- [Shields.io](https://shields.io/)
-- [Github Emojis](https://gist.github.com/rxaviers/7360908)
-
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
